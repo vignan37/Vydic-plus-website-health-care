@@ -362,10 +362,39 @@ async function fetchClientData() {
   }
 }
 
+const staticClients = [
+  {
+    webUrl: "https://web.busyness.app/",
+    businessName: "Medication Delivery",
+    logoUrl: "images/products/App For A Shop.png",
+  },
+  {
+    webUrl: "https://web.busyness.app/",
+    businessName: "Doctor Consultation Online",
+    logoUrl: "images/products/App For Boutique.png",
+  },
+  {
+    webUrl: "https://web.busyness.app/",
+    businessName: "Offline Doctor Consultation",
+    logoUrl: "images/products/App For Meat Shop.png",
+  },
+  {
+    webUrl: "https://web.busyness.app/",
+    businessName: "OHC B2B Doctor & Nurses",
+    logoUrl: "images/products/App For Pet Stores.png",
+  },
+  {
+    webUrl: "https://web.busyness.app/",
+    businessName: "Annual Health Checkups",
+    logoUrl: "images/products/App For Pet Stores.png",
+  }
+];
+
 async function generateCards() {
   const slider = document.getElementById("company_slider");
-  const data = await fetchClientData();
-  const clients = data.clients;
+  const clients = staticClients; // Use the static client data
+  // const data = await fetchClientData();
+  // const clients = data.clients;
 
   if (Array.isArray(clients)) {
     clients.forEach((client) => {
