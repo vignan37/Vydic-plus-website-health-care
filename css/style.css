@@ -920,6 +920,11 @@ header.fixed .navbar {
       color: #fff;
       text-align: center;  
     }
+
+    .see-all-container {
+        text-align: center;
+        margin-top: 15px;
+      }
     
     .item .option:hover {
       color: #d32f2f;
@@ -929,6 +934,26 @@ header.fixed .navbar {
     .item:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)  
+    }
+
+    #see_all_button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #ffffff;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 1px;
+        font-weight: bold;
+      }
+
+      @media (max-width: 576px) {
+        .item-image {
+          width: 100%;
+          /* height: auto; */
+          max-width: 200px; /* Adjust as needed */
+          max-height: 200px; /* Adjust as needed */
+          transform: scale(1); /* Reset scaling for mobile */
+        }
     }
 
 /* ----------Feature-Detail-Section-start------ */

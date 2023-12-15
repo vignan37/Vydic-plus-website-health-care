@@ -405,6 +405,7 @@ async function generateCards() {
       logoDiv.classList.add("item");
 
       const logoImg = document.createElement("img");
+      logoImg.classList.add("item-image"); // Add the class for image styling     
       logoImg.height = 200;
       logoImg.width = 200;
       logoImg.src = client.webUrl
