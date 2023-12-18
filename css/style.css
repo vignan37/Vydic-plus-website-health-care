@@ -145,6 +145,7 @@
     --bg-white: #ffffff;
     --slider-dots-color: #c0c0c0;
     --light-bg: #ffffff;
+    --bg-yellow: #edc44f;
 }
 
 
@@ -806,7 +807,7 @@ header.fixed .navbar {
     width: 475px;
     height: 475px;
     border-radius: 100%;
-    background-color: var(--purple);
+    background-color: var(--bg-yellow);
     z-index: -5;
 }
 
