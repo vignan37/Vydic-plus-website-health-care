@@ -366,27 +366,27 @@ const staticClients = [
   {
     webUrl: "https://web.busyness.app/",
     businessName: "Medication Delivery",
-    logoUrl: "images/products/App For A Shop.png",
+    logoUrl: "images/medicine_delivery.png",
   },
   {
     webUrl: "https://web.busyness.app/",
     businessName: "Doctor Consultation Online",
-    logoUrl: "images/products/App For Boutique.png",
+    logoUrl: "images/online.png",
   },
   {
     webUrl: "https://web.busyness.app/",
     businessName: "Offline Doctor Consultation",
-    logoUrl: "images/products/App For Meat Shop.png",
+    logoUrl: "images/offline.png",
   },
   {
     webUrl: "https://web.busyness.app/",
     businessName: "OHC B2B Doctor & Nurses",
-    logoUrl: "images/products/App For Pet Stores.png",
+    logoUrl: "images/ohb.png",
   },
   {
     webUrl: "https://web.busyness.app/",
     businessName: "Annual Health Checkups",
-    logoUrl: "images/products/App For Pet Stores.png",
+    logoUrl: "images/Annual_check.png",
   }
 ];
 
@@ -405,10 +405,7 @@ async function generateCards() {
 
       const logoImg = document.createElement("img");
       logoImg.classList.add("item-image"); // Add the class for image styling
-      logoImg.src = client.webUrl
-        ? `${client.webUrl}/splash/img/light-2x.png`
-        : "https://web.busyness.app/splash/img/light-2x.png";
-      logoImg.alt = client.businessName;
+      logoImg.src = client.logoUrl;
       // logoImg.width = 200; // Set the desired width
       // logoImg.height = 200; // Set the desired height
 
