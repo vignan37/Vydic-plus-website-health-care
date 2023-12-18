@@ -849,6 +849,11 @@ header.fixed .navbar {
     filter: grayscale(0);
 } */
 
+
+
+/*new code*/
+
+
 .company_slider {
     margin-top: 40px;
   }
@@ -878,26 +883,22 @@ header.fixed .navbar {
     }
 
     .item-image {
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
       object-fit: contain;
       transform: scale(0.8);
       transition: transform 0.3s ease;
     }
 
-    .item .card-title {
-        text-align:center; /* Center the names */
-        display:none;
-    }
-    
-    .item:hover .card-title {
-      color: red; /* Replace with desired hover color */
-    }
-    
-    .item:hover .options-container {
-        display:flex;
-        flex-direction:column;
-    }
+    .card-title.centered-text {
+        text-align: center;
+      }
+
+      .card-title.small-text {
+        font-size: 14px; /* Adjust the font size as needed */
+      }
+      
+
     
     .item .options-container {
       display: none;
@@ -926,17 +927,34 @@ header.fixed .navbar {
         margin-top: 15px;
       }
     
-    .item .option:hover {
-      color: #d32f2f;
+      /* unwanted codee */
+
+      /* .item .card-title {
+        text-align:center; 
+        display:none;
     }
     
-    /* Add this class to make the background transparent black on hover */
-    .item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)  
-    }
+    .item:hover .card-title {
+      color: red;
+    } */
 
-    #see_all_button {
+      /* .item:hover .options-container {
+        display:flex;
+        flex-direction:column;
+    } */
+
+      /* .item .option:hover {
+        color: #d32f2f;
+      } */
+      
+      /* Add this class to make the background transparent black on hover */
+      /* .item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)  
+      } */
+
+      /* Your existing CSS style for the button */
+      #see_all_button {
         display: inline-block;
         padding: 8px 16px;
         background-color: #ffffff;

@@ -393,36 +393,31 @@ const staticClients = [
 async function generateCards() {
   const slider = document.getElementById("company_slider");
   const clients = staticClients; // Use the static client data
-  // const data = await fetchClientData();
-  // const clients = data.clients;
 
   if (Array.isArray(clients)) {
     clients.forEach((client) => {
       if (!client.webUrl) {
         return;
       }
-      const logoDiv = document.createElement("div");
-      logoDiv.classList.add("item");
+
+      const cardDiv = document.createElement("div"); // Create a div for the entire card
+      cardDiv.classList.add("item");
 
       const logoImg = document.createElement("img");
-      logoImg.classList.add("item-image"); // Add the class for image styling     
-      logoImg.height = 200;
-      logoImg.width = 200;
+      logoImg.classList.add("item-image"); // Add the class for image styling
       logoImg.src = client.webUrl
         ? `${client.webUrl}/splash/img/light-2x.png`
         : "https://web.busyness.app/splash/img/light-2x.png";
       logoImg.alt = client.businessName;
+      // logoImg.width = 200; // Set the desired width
+      // logoImg.height = 200; // Set the desired height
+
+      const businessName = document.createElement("p");
+      businessName.classList.add("card-title", "centered-text"); // Add the class for name styling and centering
+      businessName.textContent = client.businessName;
 
       const optionsContainer = document.createElement("div");
       optionsContainer.classList.add("options-container");
-
-      const businessNameLink = document.createElement("a");
-      businessNameLink.classList.add("option");
-      businessNameLink.textContent = client.businessName;
-      businessNameLink.href = client.webUrl;
-      businessNameLink.target = "_blank";
-
-      optionsContainer.appendChild(businessNameLink);
 
       // Add Play Store link if it's not empty
       if (client.playStoreLink) {
@@ -443,11 +438,22 @@ async function generateCards() {
         iosStoreLink.target = "_blank";
         optionsContainer.appendChild(iosStoreLink);
       }
-      logoDiv.appendChild(logoImg);
-      logoDiv.appendChild(optionsContainer);
-      slider.appendChild(logoDiv);
+
+      // Event listener to handle the card click
+      cardDiv.addEventListener("click", () => redirectToURLVydic());
+
+      cardDiv.appendChild(logoImg);
+      cardDiv.appendChild(businessName);
+      cardDiv.appendChild(optionsContainer);
+      slider.appendChild(cardDiv);
     });
   }
+}
+
+function redirectToURLVydic() {
+  const redirectTo = "freeTrail.html/";
+  console.log('redirection ', redirectTo);
+  window.location.href = redirectTo;
 }
 
 function initCarousel() {
