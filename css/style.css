@@ -2049,7 +2049,7 @@ footer {
 }
 
 footer .top_footer {
-    background-color: #DE4749;
+    background-color: #4e3822;
     padding: 180px 0 60px 0;
     position: relative;
     overflow: hidden;
@@ -2127,7 +2127,7 @@ footer .app_btn li:last-child {
 }
 
 footer .bottom_footer {
-    background-color: var(--bg-purple);
+    background-color: #392919;
 }
 
 /* footer heading and text colors variable */
