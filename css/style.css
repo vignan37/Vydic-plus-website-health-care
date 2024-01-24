@@ -227,6 +227,14 @@ button:focus,
     margin-right: 10%;
 }
 
+#our_vision_bg{
+    background-color: var(--bg-white);
+    border-radius: 30px;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 
 /* purple button */
 .puprple_btn {
@@ -1807,7 +1815,7 @@ iframe#youtubevideo {
 }
 
 .free_app_section .container .free_app_inner {
-    background-color: var(--bg-purple);
+    background-color: #4e3822;
     border-radius: 30px;
     padding: 20px 100px;
     padding-bottom: 50px;
