@@ -448,7 +448,7 @@ async function generateCards() {
 }
 
 function redirectToURLVydic() {
-  const redirectTo = "freeTrail.html/";
+  const redirectTo = "https://vydic-plus.busyness.app/#/";
   console.log('redirection ', redirectTo);
   window.location.href = redirectTo;
 }
